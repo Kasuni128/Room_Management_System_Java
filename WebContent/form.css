@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+
+form {
+	width: 250px;
+	height:auto;
+	background-color:black;
+	
+	border-radius: 30px;
+	border: outset;
+	
+	border-width:5px;
+	
+	
+}

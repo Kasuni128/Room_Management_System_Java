@@ -1,0 +1,135 @@
+@charset "ISO-8859-1";
+body{
+	
+	background:url("payment.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+label {
+  margin-left:10px;
+  display: block;
+  color:white;
+  border-radius:300px;
+}
+input[type=text] {
+  width:75%;
+  margin: 10px 0;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-align:right;
+  border-color:white;
+  border-width:2px;
+  
+}
+form {
+	color:black;
+	width: 600px;
+	height:auto;
+	background-color:black;
+	opacity:.8;
+	border-radius: 30px;
+	border: outset;
+	border-color:grey;
+	border-width:5px;
+	font-size:20px;
+	
+}
+form table{
+	color:white;
+	
+}
+#check_form label {
+  text-align:left;
+}
+	
+span.price {
+  float: right;
+  color: grey;
+}
+h2{
+	color:black;
+}
+button{
+	
+	background-color:white;
+	width:200px;
+	border-radius:30px;
+	font-size:24px;
+	border-color:red;
+	margin-top:20px;
+	border-radius: 30px;
+}
+#check_form a{
+	text-decoration:none;
+	color:white;
+}
+ 
+.add-button {
+    background-color:green;
+    color:white;
+    width: auto;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.reset-button {
+    background-color: red;
+    color: white;
+    width: auto;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.list-button {
+    background-color: blue;
+    color: white;
+    width:auto;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.update-button {
+    background-color:green;
+    color:white;
+    width: auto;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    width: auto;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+
+h5{
+	
+	font-size: 36px;
+}
+

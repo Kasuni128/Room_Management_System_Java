@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create table user Query -->
+	<query id="create_user_table">
+        <![CDATA[
+            CREATE TABLE user(
+				userID varchar(10) not null,
+				name varchar(50),
+				mobile varchar(50),
+				email varchar(50),
+				nic varchar(50),
+				address  varchar(50),
+				newPassword varchar(50),
+				confirmPassword varchar(50) ,
+				primary key (userID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE USERS Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS user 
+        ]]>
+	</query>
+
+	<!-- Select all user orders Query -->
+	<query id="insert_user">
+        <![CDATA[
+          	insert into user (userID, name, mobile, email, nic, address, newPassword, confirmPassword) 
+          	values (?, ?, ?, ?, ?, ?,?,?)
+        ]]>
+	</query>
+
+	<!-- Select a particular user by id Query -->
+	<query id="user_by_id">
+         <![CDATA[        
+            select * from user where user.userID = ?
+        ]]>
+	</query>
+
+	<!-- Select all users -->
+	<query id="all_users">
+         <![CDATA[        
+            select * from user
+        ]]>
+	</query>
+
+	<!-- Delete a particular user by id Query -->
+	<query id="remove_user">
+         <![CDATA[        
+            delete from user where user.userID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular user by id Query -->
+	<query id="update_user">
+         <![CDATA[        
+            update user as u 
+            set u.name = ?, u.mobile = ?, u.email = ?, u.nic = ?, u.address = ?, u.newPassword = ?, u.confirmPassword = ? 
+            where u.userID = ?
+        ]]>
+	</query>
+	
+		<!-- Get user IDs Query -->
+	<query id="user_ids">
+         <![CDATA[        
+            select u.userID from user as u
+        ]]>
+	</query>
+
+</Querys>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create table room Query -->
+	<query id="create_room_table">
+        <![CDATA[
+            CREATE TABLE room(
+				roomID varchar(10) not null,
+				roomName varchar(20),
+				roomtype varchar(15),
+				description varchar(100),
+				facilities varchar(50),
+				price varchar(15),
+				primary key (roomID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE ROOMS Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS room 
+        ]]>
+	</query>
+
+	<!-- Select all customer orders Query -->
+	<query id="insert_room">
+        <![CDATA[
+          	insert into room (roomID, roomName, roomtype,description,facilities, price) 
+          	values (?, ?, ?, ?,?,?)
+        ]]>
+	</query>
+
+	<!-- Select a particular room by id Query -->
+	<query id="room_by_id">
+         <![CDATA[        
+            select * from room where room.roomID = ?
+        ]]>
+	</query>
+
+	<!-- Select all rooms -->
+	<query id="all_rooms">
+         <![CDATA[        
+            select * from room
+        ]]>
+	</query>
+
+	<!-- Delete a particular room by id Query -->
+	<query id="remove_room">
+         <![CDATA[        
+            delete from room where room.roomID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular room by id Query -->
+	<query id="update_room">
+         <![CDATA[        
+            update room as r
+            set r.roomName = ?, r.roomtype = ?,r.description=?,r.facilities=?, r.price = ? 
+            where r.roomID = ?
+        ]]>
+	</query>
+	
+		<!-- Get room IDs Query -->
+	<query id="room_ids">
+         <![CDATA[        
+            select r.roomID from room as r
+        ]]>
+	</query>
+
+</Querys>

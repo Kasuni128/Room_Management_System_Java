@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create table booking Query -->
+	<query id="create_booking_table">
+        <![CDATA[
+            CREATE TABLE booking(
+				bookingID varchar(10) not null,
+				bookingName varchar(20),
+				noroom varchar(20),
+				bookingdate varchar(15),
+				
+				price varchar(15),
+				primary key (bookingID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE BOOKINGS Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS booking 
+        ]]>
+	</query>
+
+	<!-- Select all customer orders Query -->
+	<query id="insert_booking">
+        <![CDATA[
+          	insert into booking (bookingID, bookingName,noroom, bookingdate, price) 
+          	values (?, ?, ?, ?,?)
+        ]]>
+	</query>
+
+	<!-- Select a particular booking by id Query -->
+	<query id="booking_by_id">
+         <![CDATA[        
+            select * from booking where booking.bookingID = ?
+        ]]>
+	</query>
+
+	<!-- Select all bookings -->
+	<query id="all_bookings">
+         <![CDATA[        
+            select * from booking
+        ]]>
+	</query>
+
+	<!-- Delete a particular booking by id Query -->
+	<query id="remove_booking">
+         <![CDATA[        
+            delete from booking where booking.bookingID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular booking by id Query -->
+	<query id="update_booking">
+         <![CDATA[        
+            update booking as b1 
+            set b1.bookingName = ?,b1.noroom=?, b1.bookingdate = ?, b1.price = ? 
+            where b1.bookingID = ?
+        ]]>
+	</query>
+	
+		<!-- Get booking IDs Query -->
+	<query id="booking_ids">
+         <![CDATA[        
+            select b1.bookingID from booking as b1
+        ]]>
+	</query>
+
+</Querys>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create table customer Query -->
+	<query id="create_customer_table">
+        <![CDATA[
+            CREATE TABLE customer(
+				customerID varchar(10) not null,
+				name varchar(20),
+				mobile varchar(15),
+				type varchar(15),
+				cardNo varchar(15),
+				expiry  varchar(50),
+				cvc varchar(20),
+				bank varchar(10), 
+				primary key (customerID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE CUSTOMERS Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS customer 
+        ]]>
+	</query>
+
+	<!-- Select all customer orders Query -->
+	<query id="insert_customer">
+        <![CDATA[
+          	insert into customer (customerID, name, mobile, type, cardNo, expiry, cvc, bank) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular customer by id Query -->
+	<query id="customer_by_id">
+         <![CDATA[        
+            select * from customer where customer.customerID = ?
+        ]]>
+	</query>
+
+	<!-- Select all customers -->
+	<query id="all_customers">
+         <![CDATA[        
+            select * from customer
+        ]]>
+	</query>
+
+	<!-- Delete a particular customer by id Query -->
+	<query id="remove_customer">
+         <![CDATA[        
+            delete from customer where customer.customerID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular customer by id Query -->
+	<query id="update_customer">
+         <![CDATA[        
+            update customer as c 
+            set c.name = ?, c.mobile = ?, c.type = ?, c.cardNo = ?, c.expiry = ?, c.cvc = ?, c.bank = ? 
+            where c.customerID = ?
+        ]]>
+	</query>
+	
+		<!-- Get customer IDs Query -->
+	<query id="customer_ids">
+         <![CDATA[        
+            select c.customerID from customer as c
+        ]]>
+	</query>
+
+</Querys>

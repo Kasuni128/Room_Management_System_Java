@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+table th{
+	
+		background:red;
+		opacity:0.6;
+		color:white;
+		 font-size: 20px;
+	
+}
+table h2{
+	
+	color:red;
+}
+
+table{
+	
+	background:black;
+	color:white;
+}
+
+
+.select-button{
+    background-color:green;
+    color:white;
+    width: auto;
+    padding: 8px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+
